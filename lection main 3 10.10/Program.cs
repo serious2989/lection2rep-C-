@@ -41,7 +41,7 @@ int Method3()
  //Console.WriteLine(year); включить чтобы работало
 
  // 4 вид - принимают и возвращают
- Console.Clear();
+ /*Console.Clear();
  string Method4(int count, string text)
  {
     int i = 0;
@@ -51,6 +51,20 @@ int Method3()
     {
         result = result + text;
         i++;
+    }
+    return result;
+ }
+ string res = Method4(10, "newconsole");
+ Console.WriteLine(res);
+*/
+Console.Clear();
+ string Method4(int count, string text)
+ {
+    string result = String.Empty;// алилуя сто лет искал ошибку тут
+    for (int i = 0; i < count; i++) //а здесь то же самое через "for"
+    
+    {
+        result = result + text;
     }
     return result;
  }
