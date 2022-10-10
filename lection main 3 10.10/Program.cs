@@ -38,4 +38,21 @@ int Method3()
 }
 
  int year = Method3();
- Console.WriteLine(year);
+ //Console.WriteLine(year); включить чтобы работало
+
+ // 4 вид - принимают и возвращают
+ Console.Clear();
+ string Method4(int count, string text)
+ {
+    int i = 0;
+    string result = String.Empty;// алилуя сто лет искал ошибку тут
+
+    while (i < count)
+    {
+        result = result + text;
+        i++;
+    }
+    return result;
+ }
+ string res = Method4(10, "newconsole");
+ Console.WriteLine(res);
