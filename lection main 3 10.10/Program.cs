@@ -32,6 +32,10 @@ void Method21(string msq, int count)
 
 //3 Вид
 
+int Method3()
+{
+    return DateTime.Now.Year;
+}
 
-
- 
+ int year = Method3();
+ Console.WriteLine(year);
