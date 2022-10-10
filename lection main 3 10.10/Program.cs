@@ -110,11 +110,46 @@ string text =  "- Я думаю, - сказал князь, улыбаясь, - 
     return result;
  }    
  string newText = Replace (text, ' ', '|');
- Console.WriteLine(newText); //разделили новыми символами. 
+ //Console.WriteLine(newText); //разделили новыми символами. 
  // приступаем к замене букв
- Console.WriteLine();
+ //Console.WriteLine();
     newText = Replace (newText, 'к', 'К');
-    Console.WriteLine(newText);
+    //Console.WriteLine(newText);
+    //Console.WriteLine();
+    //newText = Replace (newText, 'С', 'с');
+    //Console.WriteLine();
+
+//Упорядочить массив
+// 6.8.3.2.1.4.5.7
+//цикл в цикле
+
+int[] arr = {6,8,3,2,1,4,5,7};
+void PrintArray(int[]array)
+{
+    int count = array.Length;
+     for (int i = 0; i < count; i++)
+{
+    Console.Write($"{array [i]} ");
+}
     Console.WriteLine();
-    newText = Replace (newText, 'С', 'с');
-    Console.WriteLine();
+}
+void SelectionSort (int[]array)//сортировка(инт аррей - аргумент(массив))
+{
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+       int minPosition = i;//меняем позицию int temporary
+        for (int j = i + 1; j < array.Length; j++)
+          {
+            if (array[j] < array[minPosition]) minPosition = j;
+          }
+          //
+          //
+          int temporary = array[i];// кладем вместо минпосишн - темпорари
+          array[i] = array[minPosition];
+          array[minPosition] = temporary;
+
+    }
+}
+PrintArray(arr);
+SelectionSort(arr);
+PrintArray(arr);
